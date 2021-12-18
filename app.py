@@ -19,6 +19,7 @@ import model
 def index ():
 	#variable "tweets" tiene que filtrar los mensajes de un username, campo username dentro del subdocumento user
 	#IMPORTANTE: recuerda escribir el username con la primera letra mayúscula
+	#CAMBIAR "" POR LA QUERY ADECUADA PARA GUARDAR EN LA VARIABLE "tweets" LOS MENSAJES DEL USUARIO
 	tweets = ""
 	if len(tweets)!=34:
 		print(f"LA VARIABLE TWEETS NO ES CORRECTA, COMPRUEBE LA QUERY DEL ODM")

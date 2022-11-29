@@ -45,7 +45,7 @@ Una vez dentro de la carpeta, se instalan las dependencias con:
 ```
 $ pip install -r requirements.txt
 ```
-Si nuestro entorno nos da algún error de instalación lo mejor será crear un virtual environment como hicimos en la práctica ODM_FLASK.
+Si nuestro entorno nos da algún error de instalación lo mejor será crear un virtual environment como hicimos en la práctica ODM_FLASK. Si da error al instalar las dependencias también puede ayudar ejecutar el termina (powershell o terminal en windows) como administrador, buscando el programa y haciendo click con el botón derecho sobre él y "ejecutar como administrador".
 
 IMPORTANTE: En este momento lo ideal es abrir el código de la plataforma en un editor de código (VS Code, Atom, Sublime Text, ...) y observar cómo se llama la base de datos y la colección. Habrá que restaurar el dump en JSON que tengamos con ese nombre de base de datos y esa colección para que la plataforma conecte a MongoDB adecuadamente.
 También tendremos que implementar la query que está en la ruta "/" para que haga un find y filtre los mensajes con el username adecuado y los cargue en la variable "tweets".

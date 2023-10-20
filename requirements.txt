@@ -1,3 +1,4 @@
 FLASK==2.2.2
 flask_mongoengine
 vigenere
+Werkzeug==2.2.2

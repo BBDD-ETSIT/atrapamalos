@@ -24,9 +24,9 @@ class Mensajes(db.DynamicDocument):
 El **controlador** ejecuta acciones del servidor. Tiene dos rutas, "/" y "/process". Esta es la parte a personalizar para poder enganchar esta plataforma a cualquier base de datos de mensajes (Twitter, Telegram, Whatsapp, emails, ...). La ruta "/" debe llenar la variable "tweets" con los mensajes del username adecuado para que la plataforma los analice. Esta query a la base de datos debe hacerse específicamente para cada caso policial.
 
 
-## 4. Descargar e instalar el código de la plataforma
+## 2. Descargar e instalar el código de la plataforma
 
-Abra un terminal en su ordenador y siga los siguientes pasos.
+Abra un terminal en su ordenador y siga los siguientes pasos (puede sustituir el paso git clone por descargar el repositorio como zip usando el boton verde "Code-> Download Zip").
 
 El proyecto debe clonarse en el ordenador desde el que se está trabajando con:
 
@@ -45,7 +45,7 @@ Una vez dentro de la carpeta, se instalan las dependencias con:
 ```
 $ pip install -r requirements.txt
 ```
-Si nuestro entorno nos da algún error de instalación lo mejor será crear un virtual environment como hicimos en la práctica ODM_FLASK. Si da error al instalar las dependencias también puede ayudar ejecutar el termina (powershell o terminal en windows) como administrador, buscando el programa y haciendo click con el botón derecho sobre él y "ejecutar como administrador".
+Si nuestro entorno nos da algún error de instalación lo mejor será crear un virtual environment como hicimos en la práctica ODM_FLASK. Si da error al instalar las dependencias también puede ayudar ejecutar el terminal (powershell o terminal en windows) como administrador, buscando el programa y haciendo click con el botón derecho sobre él y "ejecutar como administrador".
 
 IMPORTANTE: En este momento lo ideal es abrir el código de la plataforma en un editor de código (VS Code, Atom, Sublime Text, ...) y observar cómo se llama la base de datos y la colección. Habrá que restaurar el dump en JSON que tengamos con ese nombre de base de datos y esa colección para que la plataforma conecte a MongoDB adecuadamente.
 También tendremos que implementar la query que está en la ruta "/" para que haga un find y filtre los mensajes con el username adecuado y los cargue en la variable "tweets".
@@ -56,5 +56,6 @@ Por último podemos arrancar la plataforma con:
 $ python app.py
 ```
 
-Abra un navegador y vaya a la url "http://localhost:8001" para ver la plataforma funcionando. Si la plataforma puede conectar a la base de datos y colección correcta y recibe filtrados los mensajes del username correcto, usará la Machine Learning e Inteligencia Artificial para devolver el nombre real del usuario buscado.
+Abra un navegador y vaya a la url "http://localhost:8001" para ver la plataforma funcionando. 
+Si la plataforma puede conectar a la base de datos y colección correcta y recibe filtrados los mensajes del username correcto, usará la Machine Learning e Inteligencia Artificial para devolver el nombre real del usuario buscado y con esto tendrá resuelto el reto de la Escape Room.
 
